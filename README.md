@@ -1,219 +1,243 @@
-# 🏏 T20 Team Performance Analyzer
+# 🏏 T20 Cricket Team Performance Analyzer
 
-🚀 An interactive **end-to-end data analytics dashboard** built using **Python & Streamlit** to analyze cricket team and player performance using structured match data.
+A complete cricket analytics dashboard built using **Python**, **Pandas**, **Matplotlib**, **Seaborn**, and **Streamlit** to analyze T20 cricket team performance through batting, bowling, and team-level insights.
 
----
-
-## 🌟 Project Highlights
-
-✔ Real-world **data validation system**
-✔ Full **EDA + Feature Engineering pipeline**
-✔ Interactive **multi-tab dashboard**
-✔ Clean and structured **analytics flow**
-✔ Supports **single & multiple dataset uploads**
-✔ Built with **production-style modular thinking**
+This project transforms raw cricket score data into meaningful visual analytics and automated performance summaries.
 
 ---
 
-## 🎯 Project Objective
+## 📌 Project Overview
 
-In many local or small-scale cricket tournaments, performance evaluation is often **manual and biased**.
+The **T20 Cricket Team Performance Analyzer** is a data analytics application designed to evaluate player and team performances across one or multiple T20 matches.
 
-This project solves that problem by:
+The project began as an exploratory data analysis notebook using IPL 2024 match data and was later converted into a fully interactive Streamlit web application with:
 
-👉 Converting raw match data into **data-driven insights**
-👉 Providing **fair and structured performance evaluation**
-👉 Helping teams identify **strengths and weaknesses**
-
----
-
-## 📊 Dashboard Modules
-
-### 🔹 1. Dataset Section
-
-* Upload **CSV / Excel datasets**
-* Supports **multiple file uploads**
-* Built-in **data validation system**
-* Automated **data cleaning & preprocessing**
-* Dataset guidelines + template download
+- Multi-file upload support
+- Data validation
+- Feature engineering
+- Batting analytics
+- Bowling analytics
+- Team performance summaries
+- Interactive visualizations
 
 ---
 
-### 🔹 2. Batting Analytics
+## 🚀 Try Live Project
 
-📈 Insights include:
+🔗 **Live Demo:**  
+[https://your-streamlit-app-link.streamlit.app](https://t20-team-performance-analyzer.streamlit.app/)
 
-* Individual Runs Scored
-* Total Runs Contribution
-* Player Performance per Match
-* Role-wise Runs Contribution
-* Strike Rate Comparison
-* Player Consistency Score
-* Batting Order Impact
-* Phase-wise Wickets Lost
+> Replace the above link with your actual deployed Streamlit project URL.
 
 ---
 
-### 🔹 3. Bowling Analytics
+## 📸 Project Preview
 
-📉 Insights include:
+<!-- Add screenshots here -->
 
-* Individual Wickets Taken
-* Total Wickets Contribution
-* Player Wickets per Match
-* Role-wise Wickets Contribution
-* Economy Rate Comparison
-* Bowling Consistency Score
+| Dashboard | Batting Analytics |
+|---|---|
+| Add Screenshot | Add Screenshot |
 
 ---
 
-### 🔹 4. Summary Section
+## ✨ Features
 
-📌 Auto-generated insights:
+### 🏏 Batting Analytics
+- Individual runs scored analysis
+- Strike rate comparison
+- Runs contribution charts
+- Batting consistency analysis
+- Batting order performance
+- Phase-wise wickets lost analysis
 
-* Highest Run Scorer
-* Highest Wicket Taker
-* Best Strike Rate
-* Best Economy Rate
-* Role Contributions
-* Strongest Batting Order
-* Weakest Match Phase
+### 🎯 Bowling Analytics
+- Wickets taken analysis
+- Economy rate comparison
+- Wickets contribution charts
+- Bowling consistency analysis
+- Match-wise bowling trends
 
----
+### 📊 Team Summary
+- Team runs and wickets per match
+- KPI cards for top performers
+- Automated narrative insights
+- Team contribution breakdowns
 
-## 🧠 Advanced Features Implemented
-
-### ✅ Data Validation System
-
-* Ensures dataset integrity before processing
-* Detects:
-
-  * Missing match numbers
-  * Invalid batting/bowling records
-  * Inconsistent player data
-
----
-
-### ✅ Feature Engineering
-
-* **Strike Rate Calculation**
-* **Economy Rate Calculation (custom overs logic)**
-* **Player Out Status**
-* **Batting Order Categorization**
-* **Consistency Score (mean / std)**
+### ⚙️ System Features
+- CSV and Excel upload support
+- Multi-file dataset merging
+- Automated data cleaning
+- Validation with descriptive error handling
+- Cached processing for performance optimization
 
 ---
 
-### ✅ Smart Handling
+## 🧠 Problem Statement
 
-* Handles **null values intelligently**
-* Works for **single match & multi-match datasets**
-* Prevents invalid analytics scenarios
+At the grassroots level, cricket performance is usually judged manually and subjectively. This often leads to:
+
+- Biased player evaluation
+- Inaccurate award decisions
+- Lack of statistical tracking
+- Poor team strategy planning
+
+This project solves these issues by introducing a structured, data-driven analytics system accessible even to non-technical users.
+
+---
+
+## 🎯 Objectives
+
+- Build an unbiased cricket analytics system
+- Analyze batting and bowling performance statistically
+- Measure player consistency across matches
+- Identify team strengths and weaknesses
+- Generate automated performance summaries
+- Provide a simple upload-based interface for users
 
 ---
 
 ## 🛠️ Tech Stack
 
-| Category        | Tools Used          |
-| --------------- | ------------------- |
-| Language        | Python              |
-| Data Processing | Pandas, NumPy       |
-| Visualization   | Matplotlib, Seaborn |
-| Dashboard       | Streamlit           |
+| Technology | Purpose |
+|---|---|
+| Python | Core programming language |
+| Pandas | Data cleaning and analysis |
+| NumPy | Numerical operations |
+| Matplotlib | Visualization |
+| Seaborn | Statistical plotting |
+| Streamlit | Interactive web application |
 
 ---
 
-## 📂 Project Structure
+## 📂 Dataset Structure
 
-```
-t20-cricket-team-performance-analysis/
+Each row in the dataset represents a player's performance in one match.
+
+### Required Columns
+
+- `Match_No`
+- `Player_Name`
+- `Role`
+- `Batting_Position`
+- `Batting_Start_Over`
+- `Out_Over`
+- `Balls_Played`
+- `Runs_Scored`
+- `Overs_Bowled`
+- `Runs_Given`
+- `Wickets_Taken`
+
+### Supported Formats
+- `.csv`
+- `.xlsx`
+
+---
+
+## 🔄 Data Pipeline
+
+### 1️⃣ Data Loading
+- Upload one or more CSV/Excel files
+- Files are merged automatically
+
+### 2️⃣ Data Validation
+Validation checks include:
+- T20 over constraints
+- Missing values
+- Invalid batting/bowling stats
+- Player count validation
+
+### 3️⃣ Data Cleaning
+- Missing value handling
+- Role normalization
+- Type conversion
+- Data consistency fixes
+
+### 4️⃣ Feature Engineering
+Generated metrics:
+- Strike Rate
+- Economy Rate
+- Batting Status
+- Dismissal Status
+- Consistency Scores
+
+---
+
+## 📊 Analytical Modules
+
+### 🏏 Batting Module
+- Total runs scored
+- Runs contribution
+- Match-wise run trends
+- Strike rate comparison
+- Batting consistency
+- Batting order analysis
+- Phase-wise wickets lost
+
+### 🎯 Bowling Module
+- Total wickets taken
+- Wicket contribution
+- Match-wise wicket trends
+- Economy comparison
+- Bowling consistency
+
+### 📈 Summary Module
+- Match summaries
+- KPI cards
+- Team insights
+- Automated performance narratives
+
+---
+
+## 📌 Version History
+
+### Version 1.0
+- Notebook-based analysis
+- Static visualizations
+- IPL 2024 dataset analysis
+
+### Version 2.0
+- Streamlit web application
+- Interactive dashboard
+- Multi-file upload support
+- Enhanced validation system
+
+### Version 2.01
+- Improved UI/UX
+- KPI cards
+- Better validation logic
+- Additional dashboard sections
+
+---
+
+## ⚠️ Known Limitations
+
+- Supports only T20 format currently
+- Maximum 22 unique players per upload
+- No fielding statistics support
+- No extras tracking
+
+---
+
+## 🔮 Future Scope
+
+- ODI and Test match support
+- Opposition team analysis
+- Career player profiles
+- PDF report export
+- Match result correlation analysis
+
+---
+
+## 📁 Project Structure
+
+```bash
+T20-Cricket-Team-Performance-Analyzer/
 │
 ├── app.py
 ├── requirements.txt
-├── T20_Cricket_Team_Performance_Analysis.ipynb
-│
-├── template.csv
-├── RCB_IPL2024_FirstMatch.csv
-├── RCB_IPL2024_Match2_vs_PBKS.csv
-├── RCB_IPL2024_Match3_vs_GT.csv
-│
-└── README.md
-```
-
----
-
-## 🚀 How to Run the Project
-
-### 1️⃣ Clone Repository
-
-```bash
-git clone https://github.com/your-username/t20-cricket-dashboard.git
-cd t20-cricket-dashboard
-```
-
-### 2️⃣ Install Dependencies
-
-```bash
-pip install -r requirements.txt
-```
-
-### 3️⃣ Run the App
-
-```bash
-streamlit run app.py
-```
-
----
-
-## 📈 Key Learnings
-
-* Building **end-to-end analytics systems**
-* Designing **interactive dashboards**
-* Writing **clean and scalable Python code**
-* Implementing **real-world data validation logic**
-* Converting raw data into **actionable insights**
-
----
-
-## 🔥 Recent Update (Version 2.0)
-
-📅 **Last Updated:** 16 March 2026
-
-### 🚀 Improvements:
-
-* Improved **UI structure & layout**
-* Added **Excel file support (.xlsx)**
-* Enhanced **data validation logic**
-* Added **advanced batting & bowling analytics**
-* Improved **chart styling & readability**
-* Added **interactive player selection**
-* Organized insights into **clear analytical sections**
-
----
-
-## 🔗 Project Live Link
-
-👉 *(https://t20-team-performance-analyzer.streamlit.app/)*
-
-## 🎥 Video Demonstration
-
-👉 *(https://www.linkedin.com/posts/pranay-jha-6582a937b_python-dataanalytics-streamlit-activity-7439706778315157504-x3Hk)*
-
----
-
-## 👨‍💻 About the Creator
-
-**Pranay Jha**
-🎓 B.Tech CSE Student
-📊 Aspiring Data Analyst / Data Scientist
-
----
-
-## 🔗 Connect With Me
-
-* 💼 LinkedIn: https://www.linkedin.com/in/pranay-jha-6582a937b/
-* 💻 GitHub: https://github.com/Pranay-256
-
----
-
-⭐ If you found this project useful, consider giving it a **star**!
+├── README.md
+├── datasets/
+├── notebooks/
+├── assets/
+└── screenshots/
