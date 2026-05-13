@@ -25,7 +25,7 @@ The project began as an exploratory data analysis notebook using IPL 2024 match 
 ## 🚀 Try Live Project
 
 🔗 **Live Demo:**  
-[https://your-streamlit-app-link.streamlit.app](https://t20-team-performance-analyzer.streamlit.app/)
+[Project Live Link](https://t20-team-performance-analyzer.streamlit.app/)
 
 > Replace the above link with your actual deployed Streamlit project URL.
 
